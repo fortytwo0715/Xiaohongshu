@@ -1,0 +1,219 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 20px 55px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: #49c593;
+  z-index: 999;
+  padding: 15px 0px 10px 0px;
+  box-shadow: 1px 1px 5px #a8adab;
+}
+
+.logo img {
+  height: 90px;
+  padding-left: 55px;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  padding-right: 55px;
+}
+
+.menu li {
+  margin: 0 12px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+.menu li:hover {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 3px;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+h3 {
+  font-size: 14px;
+  margin: 4px 0px;
+}
+
+p {
+  font-size: 8px;
+  margin: 0px 4px;
+}
+
+
+/* The Masonry Container */
+.masonry {
+  margin: -1.5em auto;
+  max-width: 1000px;
+  column-gap: 1.5em;
+  column-count: 2;
+  padding: 130px 0;
+  align-items: center;
+}
+
+/* The Masonry Brick */
+.item {
+  background: #fff;
+  padding: 1em;
+  margin: 0 0 1.5em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.item:hover {
+  transform: scale(1.08);
+}
+
+/* Masonry on large screens */
+@media only screen and (min-width: 1024px) {
+  .masonry {
+    column-count: 4;
+  }
+}
+
+/* Masonry on medium-sized screens */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .header {
+    padding: 10px 0px 5px 0px;
+  }
+  .masonry {
+    column-count: 3;
+    padding: 80px 0;
+  }
+  .logo img {
+  height: 50px;
+  }
+  .menu li {
+  font-size: 12px;
+  }
+}
+
+/* Masonry on small screens */
+@media only screen and (max-width: 767px) and (min-width: 540px) {
+  .header {
+    padding: 10px 0px 5px 0px;
+  }
+  .masonry {
+    column-count: 2;
+    padding: 80px 0;
+  }
+  .logo img {
+  height: 50px;
+  }
+  .menu li {
+  font-size: 12px;
+  }
+}
+
+/* Masonry on smaller screens */
+@media only screen and (max-width: 539px) and (min-width: 350px) {
+  body {
+    margin: 20px 20px;
+  }
+  .header {
+    padding: 3px 0px 0px 0px;
+  }
+  .masonry {
+    column-count: 1;
+    padding: 55px 0;
+  }
+  .logo img {
+    height: 35px;
+    padding-left: 20px;
+  }
+  .menu ul {
+    padding-right: 20px;
+  }
+  .menu li {
+    font-size: 6px;
+    margin: 0 5px;
+  }
+}
+
+.item { /* Masonry bricks or child elements */
+  background-color: #fff;
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
+  box-shadow: 1px 1px 3px #d1e4cb;
+}
+
+.item-pic {
+  position: relative;
+}
+
+.item:hover .item-pic{
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.item:hover .item-info .likes i {
+  background: linear-gradient(90deg, #4ee64e, #4ab74a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+
+.item-pic i {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: white;
+}
+
+.item-info {
+  padding: 5px 5px 0 5px;
+}
+
+.item-user, .user, .likes {
+  display: flex;
+  align-items: center;
+}
+
+.item-pic img {
+  width: 100%
+}
+
+.item-user {
+  justify-content: space-between;
+  font-size: 10px;
+}
+
+.avatar img{
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+
+.likes i:hover {
+  color: limegreen;
+}
+
